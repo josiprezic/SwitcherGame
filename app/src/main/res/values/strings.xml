@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SwitcherGame</string>
+    <string name="switcher_game">SWITCHER GAME</string>
+    <string name="play">play!</string>
+    <string name="instructions">instructions</string>
+    <string name="options">options</string>
+    <string name="exit">exit</string>
+    <string name="levels">levels</string>
+    <string name="cont">continue</string>
+</resources>
