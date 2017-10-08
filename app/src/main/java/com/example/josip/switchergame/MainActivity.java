@@ -1,8 +1,6 @@
 package com.example.josip.switchergame;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +12,6 @@ import com.example.josip.switchergame.Levels.Level2;
 import com.example.josip.switchergame.Levels.Level3;
 import com.example.josip.switchergame.Levels.Level4;
 import com.example.josip.switchergame.Util.Util;
-
-import java.util.logging.Level;
 
 public class MainActivity extends AppCompatActivity {
     Button btPlay;
@@ -30,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         //Reference
         btPlay = (Button) findViewById(R.id.btPlay);
         btLevels = (Button) findViewById(R.id.btLevels);
@@ -44,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         if(Util.getLastLevel(this) == 0) {
             btContinue.setEnabled(false);
         }
-
 
         //Start the game
         btPlay.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +84,12 @@ public class MainActivity extends AppCompatActivity {
         btLevels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //otvaranje liste levela
+                Intent intent = new Intent(getApplicationContext(), LevelsActivity.class);
+                startActivity(intent);
+
+
+
                 Toast.makeText(MainActivity.this, "Comming soon!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -116,10 +115,5 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
-
-
     }
 }
