@@ -71,10 +71,15 @@ public class Util {
     }
 
     public static void setLastLevel(Activity a, int currentLevel) {
+        int max = getLastLevel(a);
+        if (max < currentLevel) {
+            max = currentLevel;
+        }
+
         SharedPreferences pref = a.getApplicationContext().getSharedPreferences(MY_PREFS_FILE, MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
 
-        editor.putInt(LEVEL, currentLevel);
+        editor.putInt(LEVEL, max);
         editor.apply();
     }
 
