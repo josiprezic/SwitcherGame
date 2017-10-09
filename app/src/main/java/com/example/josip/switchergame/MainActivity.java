@@ -1,6 +1,8 @@
 package com.example.josip.switchergame;
 
+import android.app.VoiceInteractor;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -87,10 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 //otvaranje liste levela
                 Intent intent = new Intent(getApplicationContext(), LevelsActivity.class);
                 startActivity(intent);
-
-
-
-                Toast.makeText(MainActivity.this, "Comming soon!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -98,14 +96,16 @@ public class MainActivity extends AppCompatActivity {
         btInstructions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Comming soon!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), InstructionsActivity.class);
+                startActivity(intent);
             }
         });
 
         btOptions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Comming soon!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), OptionsActivity.class);
+                startActivity(intent);
             }
         });
 

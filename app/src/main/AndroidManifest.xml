@@ -20,7 +20,9 @@
         <activity android:name=".Levels.Level2" />
         <activity android:name=".Levels.Level3" />
         <activity android:name=".Levels.Level4" />
-        <activity android:name=".LevelsActivity"></activity>
+        <activity android:name=".LevelsActivity" />
+        <activity android:name=".InstructionsActivity" />
+        <activity android:name=".OptionsActivity"></activity>
     </application>
 
 </manifest>
